@@ -183,7 +183,7 @@ obj/build.h: FORCE
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between teled and tele-qt
-libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
+libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS) 
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
@@ -388,7 +388,7 @@ if TARGET_WINDOWS
 teled_SOURCES += teled-res.rc
 endif
 
-teled_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+teled_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 teled_CPPFLAGS = $(BITCOIN_INCLUDES)
 teled_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
@@ -404,7 +404,7 @@ tele_cli_LDADD = \
 tele_cli_SOURCES = \
   tele-cli.cpp
 
-tele_cli_CPPFLAGS = $(BITCOIN_INCLUDES)
+tele_cli_CPPFLAGS = $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
 #
 
 # tele-tx binary #

@@ -1297,9 +1297,6 @@ bool AppInit2(boost::thread_group& threadGroup)
                 if (fReindex)
                     pblocktree->WriteReindexing(true);
 
-                // Tele: load previous sessions sporks if we have them.
-                uiInterface.InitMessage(_("Loading sporks..."));
-                LoadSporksFromDB();
 
                 uiInterface.InitMessage(_("Loading block index..."));
                 if (!LoadBlockIndex()) {

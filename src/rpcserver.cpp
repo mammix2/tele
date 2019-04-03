@@ -135,6 +135,24 @@ vector<unsigned char> ParseHexO(const Object& o, string strKey)
     return ParseHexV(find_value(o, strKey), strKey);
 }
 
+int ParseInt(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != int_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not an int");
+
+    return v.get_int();
+}
+
+bool ParseBool(const Object& o, string strKey)
+{
+    const Value& v = find_value(o, strKey);
+    if (v.type() != bool_type)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, " + strKey + "is not a bool");
+
+    return v.get_bool();
+}
+
 
 /**
  * Note: This interface may still be subject to change.
@@ -1040,7 +1058,7 @@ std::string HelpExampleRpc(string methodname, string args)
 {
     return "> curl --user myusername --data-binary '{\"jsonrpc\": \"1.0\", \"id\":\"curltest\", "
            "\"method\": \"" +
-           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:8954/\n";
+           methodname + "\", \"params\": [" + args + "] }' -H 'content-type: text/plain;' http://127.0.0.1:11568/\n";
 }
 
 const CRPCTable tableRPC;

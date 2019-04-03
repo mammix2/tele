@@ -106,10 +106,12 @@ std::string to_internal(const std::string&);
 using namespace std;
 
 //TELE only features
+// Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
 bool fLiteMode = false;
+// SwiftTX
 bool fEnableSwiftTX = true;
 int nSwiftTXDepth = 5;
 int nObfuscationRounds = 2;

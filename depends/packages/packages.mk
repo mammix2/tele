@@ -1,7 +1,7 @@
 packages:=boost openssl libevent zlib zeromq tor
 native_packages:=native_ccache
 
-mingw32_packages:=curl_win
+mingw32_packages:=curl
 
 qt_native_packages=native_protobuf
 qt_packages=qrencode protobuf

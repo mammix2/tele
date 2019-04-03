@@ -209,10 +209,10 @@ QT_TRANSLATE_NOOP("tele-core", ""
 QT_TRANSLATE_NOOP("tele-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("tele-core", "(8954 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("tele-core", "(11568 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("tele-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("tele-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("tele-core", "(must be 8954 for mainnet)"),
+QT_TRANSLATE_NOOP("tele-core", "(must be 11568 for mainnet)"),
 QT_TRANSLATE_NOOP("tele-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("tele-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("tele-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

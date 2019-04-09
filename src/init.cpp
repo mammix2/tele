@@ -475,7 +475,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageGroup(_("Obfuscation options:"));
     strUsage += HelpMessageOpt("-enableobfuscation=<n>", strprintf(_("Enable use of automated obfuscation for funds stored in this wallet (0-1, default: %u)"), 0));
     strUsage += HelpMessageOpt("-obfuscationrounds=<n>", strprintf(_("Use N separate masternodes to anonymize funds  (2-8, default: %u)"), 2));
-    strUsage += HelpMessageOpt("-anonymizeteleamount=<n>", strprintf(_("Keep N TELE anonymized (default: %u)"), 0));
+    strUsage += HelpMessageOpt("-anonymizecoinamount=<n>", strprintf(_("Keep N TELE anonymized (default: %u)"), 0));
     strUsage += HelpMessageOpt("-liquidityprovider=<n>", strprintf(_("Provide liquidity to Obfuscation by infrequently mixing coins on a continual basis (0-100, default: %u, 1=very frequent, high fees, 100=very infrequent, low fees)"), 0));
 
     strUsage += HelpMessageGroup(_("SwiftTX options:"));
@@ -1633,7 +1633,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nObfuscationRounds = 99999;
     }
 
-    nAnonymizeCoinAmount = GetArg("-anonymizeteleamount", 0);
+    nAnonymizeCoinAmount = GetArg("-anonymizecoinamount", 0);
     if (nAnonymizeCoinAmount > 999999) nAnonymizeCoinAmount = 999999;
     if (nAnonymizeCoinAmount < 2) nAnonymizeCoinAmount = 2;
 

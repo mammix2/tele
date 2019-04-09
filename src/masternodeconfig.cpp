@@ -68,7 +68,7 @@ bool CMasternodeConfig::read(std::string& strErr)
                 return false;
             }
         } else if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-            if (CService(ip).GetPort() == Params().GetDefaultPort()) {
+            if (CService(ip).GetPort() != Params().GetDefaultPort()) {
                 strErr = _("Invalid port detected in masternode.conf") + "\n" +
                          strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
                           _("(must be Params().GetDefaultPort() for testnet)");

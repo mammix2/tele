@@ -215,6 +215,17 @@ void OptionsDialog::setMapper()
     mapper->addMapping(ui->obfuscationRounds, OptionsModel::ObfuscationRounds);
     mapper->addMapping(ui->AnonymizeCoins, OptionsModel::AnonymizeCoinsAmount);
     mapper->addMapping(ui->showMasternodesTab, OptionsModel::ShowMasternodesTab);
+#ifdef ENABLE_OBFUSCATION
+    ui->obfuscationRounds->setEnabled(true);
+    ui->AnonymizeCoins->setEnabled(true);
+
+#else
+    ui->obfuscationRounds->setEnabled(false);
+    ui->obfuscationRounds->setToolTip("Currently Disabled");
+    ui->AnonymizeCoins->setEnabled(false);
+    ui->AnonymizeCoins->setToolTip("Currently Disabled");
+#endif
+
 }
 
 void OptionsDialog::enableOkButton()

@@ -75,7 +75,7 @@ bool CMasternodeConfig::read(std::string& strErr)
                 streamConfig.close();
             return false;
             }
-        }
+        } else
 
 
         add(alias, ip, privKey, txHash, outputIndex);

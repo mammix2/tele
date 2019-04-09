@@ -803,7 +803,7 @@ QWidget .QFrame#frame > .QLabel {
 	min-height:30px;
 }
 
-QWidget .QFrame#frame .QLabel#label_5 { /* Wallet Label */
+QWidget .QFrame#frame .QLabel#labelBalancesHeader { /* Wallet Label */
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	min-width:160px;
 	background-color:transparent;
@@ -962,7 +962,7 @@ QWidget .QFrame#frameObfuscation #formLayoutWidget > .QLabel {
 	min-height:25px;
 }
 
-QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#label_6 { /* Obfuscation Status Label */
+QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelObfuscationStatusText { /* Obfuscation Status Label */
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	min-width:160px;
 	background-color:transparent;
@@ -975,7 +975,7 @@ QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#obfuscationEnabled { 
 
 }
 
-QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#label_7 { /* Obfuscation Completion Label */
+QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelObfuscationCompletionText { /* Obfuscation Completion Label */
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	min-width:160px;
 	background-color:transparent;
@@ -1011,7 +1011,7 @@ QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelAnonymized { /* 
 
 }
 
-QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#label_8 { /* Obfuscation Amount and Rounds Label */
+QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelObfuscationRoundsText { /* Obfuscation Amount and Rounds Label */
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	min-width:160px;
 	background-color:transparent;
@@ -1024,7 +1024,7 @@ QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelAmountRounds { /
 
 }
 
-QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#label_9 { /* Obfuscation Submitted Denom Label */
+QWidget .QFrame#frameObfuscation #formLayoutWidget .QLabel#labelObfuscationDemonText { /* Obfuscation Submitted Denom Label */
 	qproperty-alignment: 'AlignVCenter | AlignRight';
 	min-width:160px;
 	background-color:transparent;
@@ -1123,16 +1123,16 @@ QWidget .QFrame#frame_2 { /* Transactions Widget */
 	background-repeat:none;
 }
 
-QWidget .QFrame#frame_2 .QLabel#label_4 { /* Recent Transactions Label */
-	min-width:180px;
-	color:#020202;
-	margin-left:67px;
-	margin-top:83px;
-	margin-right:5px;
-	padding-right:5px;
-	font-weight:bold;
-	font-size:15px;
-	min-height:24px;
+QWidget .QFrame#frame_2 .QLabel#labelRecentTransactionsHeader { /* Recent Transactions Label */
+        qproperty-alignment: 'AlignVCenter | AlignRight';
+        min-width:160px;
+        background-color:#020202;
+        color:#F9F9F9;
+        margin-right:5px;
+        padding-right:5px;
+        font-weight:bold;
+        font-size:14px;
+        min-height:35px;
 }
 
 QWidget .QFrame#frame_2 .QLabel#labelTransactionsStatus { /* Recent Transactions Sync Status */

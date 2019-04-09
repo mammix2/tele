@@ -52,7 +52,7 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="labelBalancesHeader">
               <property name="font">
                <font>
                 <weight>75</weight>
@@ -432,14 +432,14 @@
             <number>12</number>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="label_6">
+            <widget class="QLabel" name="labelObfuscationStatusText">
              <property name="text">
               <string>Status:</string>
              </property>
             </widget>
            </item>
            <item row="1" column="0">
-            <widget class="QLabel" name="label_7">
+            <widget class="QLabel" name="labelObfuscationCompletionText">
              <property name="text">
               <string>Completion:</string>
              </property>
@@ -479,7 +479,7 @@
             </widget>
            </item>
            <item row="3" column="0">
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="labelObfuscationRoundsText">
              <property name="text">
               <string>Amount and Rounds:</string>
              </property>
@@ -493,7 +493,7 @@
             </widget>
            </item>
            <item row="4" column="0">
-            <widget class="QLabel" name="label_9">
+            <widget class="QLabel" name="labelObfuscationDemonText">
              <property name="text">
               <string>Submitted Denom:</string>
              </property>
@@ -1133,6 +1133,22 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <widget class="QFrame" name="frame_2">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -1142,25 +1158,9 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <spacer name="verticalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>75</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="labelRecentTransactionsHeader">
               <property name="font">
                <font>
                 <weight>75</weight>

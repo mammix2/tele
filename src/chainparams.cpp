@@ -246,6 +246,7 @@ public:
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 0;
         nMaxMoneyOut = 40000000 * COIN;
+        nRequiredMasternodeCollateral = 10000 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = fGenTime;

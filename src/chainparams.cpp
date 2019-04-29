@@ -182,8 +182,10 @@ public:
 
         //vFixedSeeds.clear();
         //vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("seed1.telecoin.info", "seed1.telecoin.info"));
-        vSeeds.push_back(CDNSSeedData("seed2.telecoin.info", "seed2.telecoin.info"));
+        vSeeds.push_back(CDNSSeedData("tele-seed1.telecoin.info", "tele-seed1.telecoin.info"));
+        vSeeds.push_back(CDNSSeedData("tele-seed2.telecoin.info", "tele-seed2.telecoin.info"));
+        vSeeds.push_back(CDNSSeedData("tele-seed3.telecoin.info", "tele-seed3.telecoin.info"));
+        vSeeds.push_back(CDNSSeedData("tele-seed4.telecoin.info", "tele-seed4.telecoin.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 66);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85);

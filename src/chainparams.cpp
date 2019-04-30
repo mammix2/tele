@@ -147,7 +147,7 @@ public:
         nTargetSpacing = 1 * 60;
         nLastPOWBlock = 1000; // Extended PoW phase to help set up the network
         nMaturity = 100;
-		nStakeMinAge = 10*60;
+        nStakeMinAge = 60 * 60 * 8;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 0;
         nMaxMoneyOut = int64_t(40000000) * COIN;
@@ -243,7 +243,7 @@ public:
         nTargetTimespan = 1 * 60;
         nTargetSpacing = 1 * 60;
         nLastPOWBlock = 1000;
-		nStakeMinAge = 10*60;
+        nStakeMinAge = 10 * 60;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 0;

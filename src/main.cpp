@@ -945,7 +945,7 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
         // Read block header
         CBlockHeader prevblock = pindex->GetBlockHeader();
 
-        if (prevblock.nTime + nStakeMinAge > nTxTime)
+        if (prevblock.nTime + Params().GetStakeMinAge() > nTxTime)
             continue; // only count coins meeting min age requirement
 
         if (nTxTime < prevblock.nTime) {

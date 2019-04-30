@@ -289,6 +289,7 @@ public:
         strObfuscationPoolDummyAddress = "4TehAVqTU46LZv2gxcE7HezizF59q3L1gX";
         nStartMasternodePayments = fGenTime;
     }
+
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return dataTestnet;

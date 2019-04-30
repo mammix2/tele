@@ -1,7 +1,13 @@
 TELE integration/staging repository
 =====================================
 
+#### (Master) branch CI build status
+
 [![Build Status](https://travis-ci.com/mammix2/tele.svg?branch=master)](https://travis-ci.com/mammix2/tele)
+
+#### (Travis-CI) branch CI build status
+
+[![Build Status](https://travis-ci.com/mammix2/tele.svg?branch=Travis-CI)](https://travis-ci.com/mammix2/tele)
 
 
 Tele is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.

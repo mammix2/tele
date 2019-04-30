@@ -1,7 +1,8 @@
 TELE integration/staging repository
 =====================================
 
-[![Build Status](https://travis-ci.org/TELE-Project/TELE.svg?branch=master)](https://travis-ci.org/TELE-Project/TELE) [![GitHub version](https://badge.fury.io/gh/tele-Project%2FTELE.svg)](https://badge.fury.io/gh/tele-Project%2FTELE)
+[![Build Status](https://travis-ci.com/mammix2/tele.svg?branch=master)](https://travis-ci.com/mammix2/tele)
+
 
 Tele is a cutting edge cryptocurrency, with many features not available in most other cryptocurrencies.
 - Anonymized transactions using coin mixing technology, we call it _Obfuscation_.

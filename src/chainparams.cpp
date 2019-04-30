@@ -147,13 +147,13 @@ public:
         nTargetSpacing = 1 * 60;
         nLastPOWBlock = 1000; // Extended PoW phase to help set up the network
         nMaturity = 100;
+		nStakeMinAge = 10*60;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 0;
         nMaxMoneyOut = int64_t(40000000) * COIN;
         nModifierInterval = 60;
         nModifierIntervalRatio = 3;
         //nBudgetPercent = 5;
-        nMinStakeAge = 60*60*8; // 8 Hours
         nMasternodeRewardPercent = 60; // 60 % of block reward that goes to masternodes
         nRequiredMasternodeCollateral = 10000 * COIN;
 
@@ -208,7 +208,6 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-
         strSporkPubKey = "045F64A93F8D210B95F23CE59DC6D301D8F2973E6BB37152DF091BD0B6822CEC9D93E511DE6D437D25E12FB4FF2C35508B92F14FFD9323F3E89E876D511CE2B8BF";
         strObfuscationPoolDummyAddress = "ThrqmpofzM9JFFVgbCzzrjRCZhwgYVZqTd";
         nStartMasternodePayments = fGenTime;
@@ -244,6 +243,7 @@ public:
         nTargetTimespan = 1 * 60;
         nTargetSpacing = 1 * 60;
         nLastPOWBlock = 1000;
+		nStakeMinAge = 10*60;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 0;
@@ -288,6 +288,7 @@ public:
         strObfuscationPoolDummyAddress = "4TehAVqTU46LZv2gxcE7HezizF59q3L1gX";
         nStartMasternodePayments = fGenTime;
     }
+
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
         return dataTestnet;

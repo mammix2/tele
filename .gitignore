@@ -103,7 +103,7 @@ qrc_*.cpp
 *.creator.user
 *.files
 *.includes
-
+*.autosave
 
 # Mac specific
 .DS_Store

@@ -22,7 +22,6 @@ packages:
 - "zip"
 - "ca-certificates"
 - "python"
-- "rename"
 remotes:
 - "url": "https://github.com/mammix2/tele.git"
   "dir": "tele"

@@ -4575,6 +4575,14 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             return true;
         }
 
+		// Future usage: enforce minimum protocol version on network
+//		if (pfrom->nVersion < MIN_PROTOCOL_VERSION) {/
+//			LogPrintf("Diconnect old protocol version wallet, Peer protocol version: \n");
+//            pfrom->fDisconnect = true;
+//		}
+
+
+
         pfrom->addrLocal = addrMe;
         if (pfrom->fInbound && addrMe.IsRoutable()) {
             SeenLocal(addrMe);

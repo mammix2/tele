@@ -147,7 +147,7 @@ void OptionsModel::Init()
     if (settings.contains("nObfuscationRounds"))
         SoftSetArg("-obfuscationrounds", settings.value("nObfuscationRounds").toString().toStdString());
     if (settings.contains("nAnonymizeCoinAmount"))
-        SoftSetArg("-anonymizeteleamount", settings.value("nAnonymizeCoinAmount").toString().toStdString());
+        SoftSetArg("-anonymizecoinamount", settings.value("nAnonymizeCoinAmount").toString().toStdString());
 
     language = settings.value("language").toString();
 }

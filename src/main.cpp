@@ -4934,21 +4934,21 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             vWorkQueue.push_back(inv.hash);
 
             LogPrint("mempool", "AcceptToMemoryPool: peer=%d %s : accepted %s (poolsz %u)\n",
-                     pfrom->id, pfrom->cleanSubVer,
-                     tx.GetHash().ToString(),
-                     mempool.mapTx.size());
+                pfrom->id, pfrom->cleanSubVer,
+                tx.GetHash().ToString(),
+                mempool.mapTx.size());
 
             // Recursively process any orphan transactions that depended on this one
             set<NodeId> setMisbehaving;
-            for(unsigned int i = 0; i < vWorkQueue.size(); i++) {
+            for (unsigned int i = 0; i < vWorkQueue.size(); i++) {
                 map<uint256, set<uint256> >::iterator itByPrev = mapOrphanTransactionsByPrev.find(vWorkQueue[i]);
-                if(itByPrev == mapOrphanTransactionsByPrev.end())
+                if (itByPrev == mapOrphanTransactionsByPrev.end())
                     continue;
-                for(set<uint256>::iterator mi = itByPrev->second.begin();
-                    mi != itByPrev->second.end();
-                    ++mi) {
-                    const uint256 &orphanHash = *mi;
-                    const CTransaction &orphanTx = mapOrphanTransactions[orphanHash].tx;
+                for (set<uint256>::iterator mi = itByPrev->second.begin();
+                     mi != itByPrev->second.end();
+                     ++mi) {
+                    const uint256& orphanHash = *mi;
+                    const CTransaction& orphanTx = mapOrphanTransactions[orphanHash].tx;
                     NodeId fromPeer = mapOrphanTransactions[orphanHash].fromPeer;
                     bool fMissingInputs2 = false;
                     // Use a dummy CValidationState so someone can't setup nodes to counter-DoS based on orphan
@@ -4957,16 +4957,16 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     CValidationState stateDummy;
 
 
-                    if(setMisbehaving.count(fromPeer))
+                    if (setMisbehaving.count(fromPeer))
                         continue;
-                    if(AcceptToMemoryPool(mempool, stateDummy, orphanTx, true, &fMissingInputs2)) {
+                    if (AcceptToMemoryPool(mempool, stateDummy, orphanTx, true, &fMissingInputs2)) {
                         LogPrint("mempool", "   accepted orphan tx %s\n", orphanHash.ToString());
                         RelayTransaction(orphanTx);
                         vWorkQueue.push_back(orphanHash);
                         vEraseQueue.push_back(orphanHash);
-                    } else if(!fMissingInputs2) {
+                    } else if (!fMissingInputs2) {
                         int nDos = 0;
-                        if(stateDummy.IsInvalid(nDos) && nDos > 0) {
+                        if (stateDummy.IsInvalid(nDos) && nDos > 0) {
                             // Punish peer that gave us an invalid orphan tx
                             Misbehaving(fromPeer, nDos);
                             setMisbehaving.insert(fromPeer);

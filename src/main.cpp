@@ -1629,6 +1629,7 @@ int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
     }
 
     if (IsSporkActive(SPORK_17_POW_ENABLER)) { // ensure SPORK_17_POW_ENABLER isn't used for profit. Only used for validating TX if chain has stalled.
+        LogPrintf("@@@ WARNING @@@ SPORK_17_POW_ENABLER active: disabling rewards until made inactive");
         nSubsidy = 0 * COIN;
     }
         

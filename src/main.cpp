@@ -1620,12 +1620,17 @@ int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
 
 
     CAmount nSubsidy;
+    if (!IsSporkActive(SPORK_17_POW_ENABLER)) { // ensure SPORK_17_POW_ENABLER is false during initial coin pre-mine
+        if (nHeight < 499){
+            nSubsidy = 31000 * COIN;
+        } else {
+            nSubsidy = 0.8409 * COIN;
+        }
+    }
 
-    if (nHeight < 499){
-		nSubsidy = 31000 * COIN;
-    } else {
-        nSubsidy = 0.8409 * COIN;	
-	}
+    if (IsSporkActive(SPORK_17_POW_ENABLER)) { // ensure SPORK_17_POW_ENABLER isn't used for profit. Only used for validating TX if chain has stalled.
+        nSubsidy = 0 * COIN;
+    }
         
     return nSubsidy + nFees;
 }

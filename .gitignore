@@ -1,4 +1,4 @@
-.gitignore
+#.gitignore
 *.sublime-project
 *.sublime-workspace
 todo.txt
@@ -8,6 +8,9 @@ config.status
 src/.deps/*
 src/qt/.deps/*
 src/zmq/.deps/*
+
+push_all_repos.sh
+push_all_repos_tag.sh
 
 *.tar.gz
 

@@ -107,6 +107,8 @@ qrc_*.cpp
 *.files
 *.includes
 *.autosave
+*.cxxflags
+*.cflags
 
 # Mac specific
 .DS_Store

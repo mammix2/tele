@@ -1,8 +1,8 @@
 package=tor
-$(package)_version=0.4.0.5
+$(package)_version=0.4.3.5
 $(package)_download_path=https://dist.torproject.org
 $(package)_file_name=$(package)-$($(package)_version).tar.gz
-$(package)_sha256_hash=b5a2cbf0dcd3f1df2675dbd5ec10bbe6f8ae995c41b68cebe2bc95bffc90696e
+$(package)_sha256_hash=616a0e4ae688d0e151d46e3e4258565da4d443d1ddbd316db0b90910e2d5d868
 $(package)_dependencies=zlib libevent openssl
 $(package)_patches=remove_libcap.patch
 
